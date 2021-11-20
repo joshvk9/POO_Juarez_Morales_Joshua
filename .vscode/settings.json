@@ -1,3 +1,7 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "java.project.sourcePaths": [
+        "05_Clases",
+        "08.5_Cuadros_de__Movimiento"
+    ]
 }
