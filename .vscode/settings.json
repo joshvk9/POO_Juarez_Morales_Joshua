@@ -1,7 +1,8 @@
 {
     "git.ignoreLimitWarning": true,
     "java.project.sourcePaths": [
+        "Examen",
         "10_PagosBiblioteca",
-        "Examen"
+        ""
     ]
 }
