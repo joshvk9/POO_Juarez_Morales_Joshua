@@ -1,10 +1,10 @@
-package Ahorcado;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Ahoracado{
 
     static Scanner lector = new Scanner(System.in);
+    private static int i;
 
 // La maquina  Elige una palabra al azar
      public static void main(String[] args) { 
@@ -17,8 +17,7 @@ public class Ahoracado{
         //intetos para adivinar si no pierdes 
         int intentos = 3; 
 
-
-        boolean algunletraacetada;
+        
      
         //Ciclo
 
@@ -29,32 +28,31 @@ public class Ahoracado{
             System.out.println(palabraGuiones);
             System.out.println("Ingresa una letra:  ");
             char letra = lector.next().charAt(0); 
+            boolean Algunletraacetada = true;
             letra = Character.toUpperCase(letra);
             for (int i = 0; i < palabraSecreta.length(); i++){
                 //comparacion de la letras 
                 if(palabraSecreta.charAt(i) == letra ){
                     palabraGuiones[i] = letra; 
-                    algunletraacetada = true;
+                    Algunletraacetada = false;
                     
                     //si no adivinamos "mensaje "
                 } 
             }
-            if(!algunletraacetada){
-
-                intentos--;
+            if(Algunletraacetada){
+                i = intentos--;
                 System.out.println("Es Incorrecto" +letra);
                 if(intentos == 0){
                     JuegoTerminado = true;
                     System.out.println("Fin del juego");
                 }
-
-            
-            }else{
+            }
+            else{
                 juegoGanado = hayGuiones(palabraGuiones);
                 if(juegoGanado)System.out.println("Felicidades has ganado");
                 
             }
-        }while(!JuegoTerminado)
+        }while(!JuegoTerminado);
         
     }
 
@@ -84,20 +82,7 @@ public class Ahoracado{
                 return true;
 
             }
-        }
-
-
-        
-        
+        }    
         return false;
     }
-
-
-
-
-
-
- 
-
 }
-
