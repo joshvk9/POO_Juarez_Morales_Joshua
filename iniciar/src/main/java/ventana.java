@@ -3,24 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany._ventana;
 
 /**
  *
  * @author Joshua
  */
-
 import javax.swing.*;
 
-public class Venteana {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class ventana {
     
+    
+            
     public static void main(String[] args){
+        
     
         /*
         Como se vio en la teoria es necesario primero crear el frame 
         */
         
-        JFrame ventana = new JFrame("Hola mundo");
+        JFrame ventana = new JFrame("Iniciar Seccion");
         
         //hay que definir el tamaño de la ventana
         ventana.setSize(400, 150);
@@ -39,14 +47,12 @@ public class Venteana {
         
         
         
+        
     }
+    
 
-    
-     
-    
     private static void agregarComponente(JPanel panel) {
-        
-        
+        frame.setLocationRelativeTo(null);
         // el panel se debe de inicializar
         panel.setLayout(null); //el panel esta vacio
         
@@ -93,19 +99,31 @@ public class Venteana {
         registrobutton.setBounds(180, 80, 120, 25);
         panel.add(registrobutton);
         
-    }
-
-    private static class window {
-
-        public window() {
-        }
-    }
-     
-
-       
-}
-    
+        
+        
+            
+        
+        
         
     
+    }
+
+    private static int getWidth() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static int getHeight() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class frame {
+
+        public frame() {
+        }
+    }
+    
 
     
+}
+
+
