@@ -17,8 +17,8 @@ public class Interfaz extends JFrame implements ActionListener {
     
     
     //definir los campos que son necesarios para interfaz
-    JTextField txtnum1;
-    JTextField txtnum2;
+    private JTextField txtnum1;
+    private JTextField txtnum2;
     //definir botones
     JButton btnresta;
     JButton btnsuma;
@@ -79,13 +79,13 @@ public class Interfaz extends JFrame implements ActionListener {
         mostrarresultado.setBounds(100, 140, 70, 30);
         panel.add(mostrarresultado);
         
-        txtnum1 = new JTextField();
-        txtnum1.setBounds(100, 10, 70, 30);
-        panel.add(txtnum1);
+        setTxtnum1(new JTextField());
+        getTxtnum1().setBounds(100, 10, 70, 30);
+        panel.add(getTxtnum1());
         
-        txtnum2 = new JTextField();
-        txtnum2.setBounds(100, 70, 70, 30);
-        panel.add(txtnum2);
+        setTxtnum2(new JTextField());
+        getTxtnum2().setBounds(100, 70, 70, 30);
+        panel.add(getTxtnum2());
         
         btnsuma = new JButton("+");
         btnsuma.setBounds(10, 200, 50, 50);
@@ -123,11 +123,11 @@ public class Interfaz extends JFrame implements ActionListener {
             //estoy asignando a la variable num1 
             //el valor del campo de texto txtnum1 y 
             //lo estoy transformando a Double
-            num1 = Double.parseDouble(txtnum1.getText());
+            num1 = Double.parseDouble(getTxtnum1().getText());
             //enviar el valor
             op.setNum1(num1);
             
-            num2 = Double.parseDouble(txtnum2.getText());
+            num2 = Double.parseDouble(getTxtnum2().getText());
             
             op.setNum2(num2);
             
@@ -139,11 +139,11 @@ public class Interfaz extends JFrame implements ActionListener {
             //estoy asignando a la variable num1 
             //el valor del campo de texto txtnum1 y 
             //lo estoy transformando a Double
-            num1 = Double.parseDouble(txtnum1.getText());
+            num1 = Double.parseDouble(getTxtnum1().getText());
             //enviar el valor
             op.setNum1(num1);
             
-            num2 = Double.parseDouble(txtnum2.getText());
+            num2 = Double.parseDouble(getTxtnum2().getText());
             
             op.setNum2(num2);
             
@@ -154,6 +154,34 @@ public class Interfaz extends JFrame implements ActionListener {
     }
     
     //ñps eventos son las acciones de los botones
+
+    /**
+     * @return the txtnum1
+     */
+    public JTextField getTxtnum1() {
+        return txtnum1;
+    }
+
+    /**
+     * @param txtnum1 the txtnum1 to set
+     */
+    public void setTxtnum1(JTextField txtnum1) {
+        this.txtnum1 = txtnum1;
+    }
+
+    /**
+     * @return the txtnum2
+     */
+    public JTextField getTxtnum2() {
+        return txtnum2;
+    }
+
+    /**
+     * @param txtnum2 the txtnum2 to set
+     */
+    public void setTxtnum2(JTextField txtnum2) {
+        this.txtnum2 = txtnum2;
+    }
 
     
     
