@@ -104,11 +104,11 @@ span{
 }
 .about-info{
     grid-column: 5/10;
-    padding: 5cm;
+    padding: 10cm;
 
 }
 .about-info h2{
-    font-size:2em ;
+    font-size:3em ;
     color :rgb(0, 0, 0);
 }
 .divider{
